@@ -1,1 +1,22 @@
-<p>users-to-db works!</p>
+<div class="section-container">
+    <h2>test</h2>
+    <table class="table table-inverse table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.genderid.gender}}</td>
+            <td>{{user.bday |date: 'shortDate'}}</td>
+        </tr>
+    </table>
+</div>

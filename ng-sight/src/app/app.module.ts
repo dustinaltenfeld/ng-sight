@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule} from '@angular/router';
+/*import { LOCALE_ID } from '@angular/core';*/
 
 import { appRoutes } from '../routes'
 
@@ -33,7 +34,7 @@ import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
     RouterModule.forRoot(appRoutes),
     ChartsModule
   ],
-  providers: [],
+  providers: [/*{ provide: LOCALE_ID, useValue: "de-DE" }*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
