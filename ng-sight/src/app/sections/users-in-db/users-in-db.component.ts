@@ -10,6 +10,6 @@ export class UsersInDBComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+      }
 
 }
