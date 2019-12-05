@@ -1,6 +1,6 @@
-export interface Genderid {
+export interface Gender {
     id: number;
-    gender: string
+    name: string
 
 }
 
@@ -8,6 +8,6 @@ export interface User {
     id: number;
     name: string;
     email: string;
-    genderid: Genderid;
+    gender: Gender;
     bday: Date;
 }

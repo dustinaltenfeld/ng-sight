@@ -1,11 +1,32 @@
 <div class="section-container">
-
-
-    <app-pagination 
-    (goPage)="goToPage($event)"
-    (goPrev)="goToPrevious()"
-    (goNext)="goToNext()"
-    [page]="page"
-    [perpage]="limit">
-    </app-pagination>
-</div>
+        <h2>test</h2>
+        <table class="table table-inverse table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.gender.name}}</td>
+                        <td>{{user.bday |date: 'shortDate'}}</td>
+                    </tr>
+            </tbody>
+        </table>
+        <app-pagination 
+        (goPage)="goToPage($event)"
+        (goPrev)="goToPrevious()"
+        (goNext)="goToNext()"
+        [page]="page"
+        [perPage]="limit"
+        [count]="total">
+        </app-pagination>
+       
+    </div>

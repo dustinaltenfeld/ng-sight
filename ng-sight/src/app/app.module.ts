@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule} from '@angular/router';
+import { HttpModule } from '@angular/http';
 /*import { LOCALE_ID } from '@angular/core';*/
 
 import { appRoutes } from '../routes'
@@ -19,6 +20,7 @@ import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 import { ServerStatesComponent } from './sections/server-states/server-states.component';
 import { ServerComponent } from './server/server.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { SalesDataService } from './services/sales-data.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { PaginationComponent } from './pagination/pagination.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    ChartsModule
+    ChartsModule,
+    HttpModule
   ],
-  providers: [/*{ provide: LOCALE_ID, useValue: "de-DE" }*/],
+  providers: [SalesDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

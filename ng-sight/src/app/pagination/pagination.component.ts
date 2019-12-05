@@ -10,7 +10,7 @@ export class PaginationComponent implements OnInit {
 
   @Input() page: number;
   @Input() count: number;
-  @Input() perpage: number;
+  @Input() perPage: number;
   @Input() pageToShow: number;
   @Input() loading: boolean;
 
@@ -32,5 +32,13 @@ export class PaginationComponent implements OnInit {
   onPage(n: number): void{
     this.goPage.emit(n);
   }
+  totalPages(): number {
+    return Math.ceil(this.count/ this.perPage) || 0;
+  }
+
+  isLastPage(): boolean {
+    return this.perPage * this.page >= this.count;
+  }
+
 
 }
