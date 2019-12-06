@@ -16,7 +16,7 @@ export class UsersToDBComponent implements OnInit {
   users:  User[];
   total = 0;
   page = 1;
-  limit = 10;
+  limit = 3;
   loading = false;
 
   /*users: User[] = [
