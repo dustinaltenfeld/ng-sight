@@ -1,0 +1,3 @@
+[submodule "ng-sight/Advantage.API"]
+	path = ng-sight/Advantage.API
+	url = https://github.com/dustinaltenfeld/AdvantageApi.git
